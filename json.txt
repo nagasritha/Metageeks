@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "lalitha",
+    "userId": 1,
+    "post_description": "SQL is the abbreviation of the Structured Query Language words and, it is used to query the databases."
+  },
+  {
+    "id": 2,
+    "username": "Kala",
+    "userId": 1,
+    "post_description": "Transact-SQL (T-SQL) language is an extended implementation of the SQL for the Microsoft SQL Server"
+  },
+  {
+    "id": 3,
+    "username": "Amulya",
+    "userId": 2,
+    "post_description": "SQL databases are used to store structured data while NoSQL databases like MongoDB are used to save unstructured data."
+  },
+  {
+    "id": 4,
+    "username": "Vishnavi",
+    "userId": 3,
+    "post_description": " MongoDB is used to save unstructured data in JSON format."
+  }
+]

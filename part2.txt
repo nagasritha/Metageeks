@@ -1,0 +1,109 @@
+1.VERIFICATION OF PALINDROM USING PYTHON
+
+    string_value=list(input())
+    def verify(value):
+        return (value==string_value[::-1])
+    result=verify(string_value)
+    if(result):
+        print("It's a palindrom");
+    else:
+    print("It's not a palindrom");
+
+2. DIFFERENCE BETWEEN SQL AND NOSQL AND IT'S EXAMPLE USE CASES
+   SQL:
+   1. SQL databases are primarily called Relational Databases (RDBMS). 
+   2. SQL requires us to use predefined schemas to determine the structure of our data before we work with it. 
+   3. All of our data must follow the same structure. 
+   4. SQL databases follow ACID properties (Atomicity, Consistency, Isolation, and Durability).
+   5. SQL is Vertically Scalable. 
+   6. MySQL,PostgreSQL etc are the examples 
+   7. Used to Alter the data within the table, create a table, Insert a table , Analyse the data ...
+
+   NOSQL:
+   1. NoSQL databases are primarily called non-relational or distributed databases. 
+   2. A NoSQL database has a dynamic schema for unstructured data.
+   3. Data can be stored in many ways , it can be document-oriented, column-oriented, graph-based, or organized as a key-value store. 
+   4. NoSQL database follows the Brewers CAP theorem (Consistency, Availability, and Partition tolerance). 
+   5. NOSQL is Horizantally Scalable.
+   6. MongoDB, Cassandra etc are the examples
+   7. Used in E-commerce applications , Social media platforms , Internet of Things (IoT) , Mobile applications. ...
+
+3.What is CORS and how does it work? How can you handle CORS-related issues in web application?
+
+    CORS, or Cross-Origin Resource Sharing, is a security feature implemented 
+    by web browsers to control how web pages in one domain can request and interact
+    with resources hosted on another domain. The same-origin policy is a security 
+    measure that prevents web pages from making requests to a different domain than 
+    the one that served the web page. CORS relaxes this policy by allowing servers to include 
+    specific HTTP headers that permit or restrict cross-origin requests.
+
+    Here's how CORS works:
+
+    Request with Origin Header:
+     When a web page in one domain makes a cross-origin HTTP request (e.g., using JavaScript's XMLHttpRequest or 
+     the Fetch API), the browser attaches an "Origin" header to the request. This header contains the origin 
+     (protocol, domain, and port) of the requesting site.
+
+    Server Response with CORS Headers: 
+    The server checks the "Origin" header to determine whether it should allow the request.
+     If the server decides to permit the request, it includes specific CORS-related HTTP headers in the response.
+
+    Access-Control-Allow-Origin: This header indicates which origin(s) are allowed to access the resource. 
+    It can be a specific origin or a comma-separated list of origins, or it can be "*", indicating that any 
+    origin is allowed.
+
+    Access-Control-Allow-Methods: This header specifies the HTTP methods (e.g., GET, POST, PUT, DELETE) that are 
+    allowed when accessing the resource.
+
+    Access-Control-Allow-Headers: This header lists the HTTP headers that can be used when making the actual request.
+
+    Access-Control-Allow-Credentials: This header indicates whether the browser should include credentials 
+    (like cookies or HTTP authentication) in the request.
+
+    Browser Enforces Access: If the server response includes the appropriate CORS headers and allows the request,
+    the browser allows the web page to access the response. Otherwise, it blocks the request and prevents the web page
+    from accessing the data.
+
+    Handling CORS-related issues in a web application:
+
+    Server-Side Configuration: Ensure that your server is configured to include the necessary CORS headers in its 
+    responses. The server should respond with the appropriate Access-Control-Allow-Origin header, allowing the specified 
+    origins.
+
+    CORS Middleware: Some web frameworks provide middleware or plugins to simplify CORS configuration. 
+    For example, in Node.js with Express, you can use the cors middleware.
+
+    Proxy Server: Set up a proxy server that acts as an intermediary between your web application and the target server.
+     The same-origin policy is not enforced on server-to-server communication, so your proxy can fetch resources on behalf
+      of your web application.
+
+    JSONP (JSON with Padding): In certain scenarios, using JSONP can be an alternative. JSONP is a technique for requesting data 
+    from a server in a different domain by dynamically adding a <script> tag to the DOM.
+
+4. CODING BEST PRACTICES.
+
+   Writing clean and maintainable code is crucial for effective software development. 
+
+  1. Meaningful Names:
+
+    Choosing descriptive and meaningful names for variables, functions, and classes.
+    Avoiding single-letter variable names unless they are used in a small scope (e.g., loop counters).
+
+  2. Comments:
+
+    Adding comments to explain complex sections of code, algorithms, or tricky parts.
+    Keeping comments up-to-date; removeing obsolete comments to avoid confusion.
+  
+  3. Modularization:
+
+    Break down our code into small, modular functions or methods with specific responsibilities.
+    Aim for the Single Responsibility Principle: each function or class should have one job.
+
+  4. Avoid Deep Nesting:
+
+    Limiting the depth of nested structures (if statements, loops) to improve code readability.
+    Consider early returns or breaking down nested code into separate functions.  
+
+  5. Consistent Code Style:
+
+    Following a consistent code style throughout our project. This can be achieved using linters and code formatters.  

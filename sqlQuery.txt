@@ -1,0 +1,30 @@
+Schema of user,posts,comments
+
+CREATE TABLE user(
+  id INTEGER NOT NULL PRIMARY KEY,
+  username VARCHAR(250)
+);
+
+CREATE TABLE posts(
+  id INTEGER NOT NULL PRIMARY KEY,
+  userId INTEGER,
+  post_description Variable(250),
+  FOREIGN KEY (userId) REFERENCES user(id) ON DELETE CASCADE
+);
+
+CREATE TABLE comments(
+  id INTEGER NOT NULL PRIMARY KEY,
+  userId INTEGER,
+  postId INTEGER,
+  comment_description Variable(250),
+  FOREIGN KEY (userId) REFERENCES user(id) ON DELETE CASCADE,
+  FOREIGN KEY (postId) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+QUERRY TO GET ALL THE POSTS, ALONG WITH USER DETAILS
+
+SELECT
+  *
+FROM
+  user NATURAL
+  JOIN posts;
